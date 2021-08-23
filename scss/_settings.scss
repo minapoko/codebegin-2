@@ -1,0 +1,73 @@
+$breakpoints:(
+  s: "only screen and (max-width: 790px)"
+);
+
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+$brandColor: #0E36C9; 
+
+.hover{
+  color: $brandColor;
+  transition: .4s;
+}
+
+@mixin titleBar {
+  background: linear-gradient(#1140ef, #0e36ca);
+  color: #fff;
+  height: 46px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 46px;
+  padding-left: 40px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 30px;
+    background: #889DED;
+    top: 8px;
+    left: 20px;
+  }
+  @include media(s){
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+    &::before{
+      height: 20px;
+      top: 5px;
+      left: 10px;
+    }
+  }
+}
+@mixin subTitleBar {
+  background: linear-gradient(#FFFFFF,#ECECEC);
+  color: #666;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 15px 20px;
+  @include media(s){
+    font-size: 14px;
+    line-height: 22px;
+    padding: 6px 10px;
+  }
+}
+@mixin redBox{
+  color: red;
+  font-weight: 700;
+  padding-top: 1rem;
+  &::before{
+    content: "■";
+  }
+  @include media(s){
+    font-size: 12px;
+    padding-top: 1em;
+  }
+}

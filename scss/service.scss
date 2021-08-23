@@ -1,0 +1,241 @@
+@import "functions";
+@import "settings";
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #CDCDCD;
+  font-size: 15px;
+  line-height: 30px;
+  color: #666;
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+
+    .header {
+      border-top: 5px solid $brandColor;
+
+      .logo {
+        height: 100px;
+        position: relative;
+
+        a {
+          img {
+            position: absolute;
+            top: calc(50% - 14px);
+            width: 300px;
+            left: 48px;
+
+          }
+        }
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          width: 100%;
+          border: 1px solid #CDCDCD;
+          border-left: none;
+          height: 66px;
+          position: relative;
+          &:last-child{
+            border-right: none;
+          }
+          &.active,
+          &:hover {
+            background: #E6EBFA;
+            @extend .hover;
+
+            &::before {
+              position: absolute;
+              content: "";
+              width: 3px;
+              height: 40px;
+              top: 12px;
+              left: 5px;
+              background: $brandColor;
+            }
+          }
+
+          a {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 700;
+            display: block;
+            text-align: center;
+            padding: 15px;
+
+            .navEn {
+              color: #bababa;
+              letter-spacing: .2em;
+              font-size: 10px;
+              line-height: 10px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+
+    #content {
+      display: flex;
+      padding: 35px;
+      @include media(s){
+        display: block;
+        padding: 21px;
+      }
+      .main {
+        flex-basis: 75%;
+
+        .titleBar {
+          @include titleBar;
+        }
+        .linkPart{
+          &:hover{
+            @extend .hover;
+            text-decoration: none;
+            background: #fff;
+            transition: .3s;
+          }
+        }
+        .guidance{
+          .titleBar>p{
+            padding: 0 20px;
+          }
+          .card {
+            border: 1px solid #bababa;
+            box-shadow: 1px 2px 5px #bababa;
+            margin: 20px 0;
+            background: linear-gradient(#FFFFFF,#ECECEC);
+            display: flex;
+            a{
+              width: 100%;
+              padding: 20px;
+              img{
+                float: left;
+                width: 30%;
+                margin-right: 10px;
+              }
+            }
+            .noLink{
+              pointer-events: none;
+            }
+            p{
+              .serviceTitle{
+                color: $brandColor;
+                font-size: 18px;
+                line-height: 32px;
+              }
+
+            }
+          }
+        }
+
+      }
+
+      .side {
+        flex-basis: 25%;
+        margin-left: 45px;
+        @include media(s){
+          margin-left: 0;
+        }
+
+        .sideTitlebar{
+          padding-left: 10px;
+          font-size: 15px;
+          font-weight: 700;
+          height: 66px;
+          line-height: 66px;
+          background: #EEEEEE;
+          border-top: 4px solid $brandColor;
+          border-bottom: 1px solid #bababa;
+        }
+        .borderBox{
+          width: 100%;
+          background: linear-gradient(#fff,#ebebeb);
+          border: 1px solid #bababa;
+          padding: 10px;
+          margin-bottom: 20px;
+          li a:hover{
+            @extend .hover;
+            background: #fff;
+          }
+  
+        }
+        .nonBorderBox{
+          margin-bottom: 20px;
+          li a:hover{
+            @extend .hover;
+          }
+        }
+        .menuBox{
+          li a{
+            font-size: 15px;
+            display: block;
+            height: 41px;
+            line-height: 41px;
+            padding-left: 10px;
+            border-bottom: 1px solid #bababa;
+
+          }
+        }
+        .productBox{
+          ul li a {
+            height: 50px;
+            padding: 10px;
+            display: flex;
+            font-size: 11px;
+            line-height: 13px;
+            border-bottom: 1px solid #bababa;
+            @include media(s){
+              height: 30%;
+            }
+            img{
+              width: 50px;
+              @include media(s){
+                width: 20%;
+                height: auto;
+              }
+            }
+            p{
+              padding-left: 10px;
+              .brandColor{
+                color: $brandColor;
+              }
+            }
+          }
+        }
+        .oparating .oparatingCompany{
+          font-size: 11px;
+          line-height: 17px;
+          text-align: center;
+          .company{
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .footer {
+      background: $brandColor;
+      color: #fff;
+      height: 74px;
+      text-align: center;
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 25px;
+      padding-top: 18px;
+      .footerSmall{
+        font-size: 12px;
+        line-height: 24px;
+      }
+    }
+  }
+}

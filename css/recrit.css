@@ -1,0 +1,290 @@
+@charset "UTF-8";
+.hover, body .container .header nav ul li.active, body .container .header nav ul li:hover, body .container #content .side .borderBox li a:hover, body .container #content .side .nonBorderBox li a:hover {
+  color: #0E36C9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #CDCDCD;
+  font-size: 15px;
+  line-height: 30px;
+  color: #666;
+}
+
+body .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+body .container .header {
+  border-top: 5px solid #0E36C9;
+}
+
+body .container .header .logo {
+  height: 100px;
+  position: relative;
+}
+
+body .container .header .logo a img {
+  position: absolute;
+  top: calc(50% - 14px);
+  width: 300px;
+  left: 48px;
+}
+
+body .container .header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .container .header nav ul li {
+  width: 100%;
+  border: 1px solid #CDCDCD;
+  border-left: none;
+  height: 66px;
+  position: relative;
+}
+
+body .container .header nav ul li:last-child {
+  border-right: none;
+}
+
+body .container .header nav ul li.active, body .container .header nav ul li:hover {
+  background: #E6EBFA;
+}
+
+body .container .header nav ul li.active::before, body .container .header nav ul li:hover::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 40px;
+  top: 12px;
+  left: 5px;
+  background: #0E36C9;
+}
+
+body .container .header nav ul li a {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding: 15px;
+}
+
+body .container .header nav ul li a .navEn {
+  color: #bababa;
+  letter-spacing: .2em;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+}
+
+body .container #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 35px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content {
+    display: block;
+    padding: 21px;
+  }
+}
+
+body .container #content .main {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+body .container #content .main .titleBar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1140ef), to(#0e36ca));
+  background: linear-gradient(#1140ef, #0e36ca);
+  color: #fff;
+  height: 46px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 46px;
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+body .container #content .main .titleBar::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 30px;
+  background: #889DED;
+  top: 8px;
+  left: 20px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .titleBar {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+  }
+  body .container #content .main .titleBar::before {
+    height: 20px;
+    top: 5px;
+    left: 10px;
+  }
+}
+
+body .container #content .main .recrit {
+  padding-bottom: 50px;
+}
+
+body .container #content .main .recrit table {
+  border-bottom: 1px solid #bababa;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+body .container #content .main .recrit table thead th {
+  text-align: left;
+  padding-left: 15px;
+}
+
+body .container #content .main .recrit table th {
+  width: 171px;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #bababa;
+  border-bottom: none;
+  font-weight: 400;
+}
+
+body .container #content .main .recrit table td {
+  display: block;
+  padding: 9px 15px;
+  border: 1px solid #bababa;
+  border-left: none;
+  border-bottom: none;
+}
+
+body .container #content .side {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-left: 45px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side {
+    margin-left: 0;
+  }
+}
+
+body .container #content .side .sideTitlebar {
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  height: 66px;
+  line-height: 66px;
+  background: #EEEEEE;
+  border-top: 4px solid #0E36C9;
+  border-bottom: 1px solid #bababa;
+}
+
+body .container #content .side .borderBox {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+  background: linear-gradient(#fff, #ebebeb);
+  border: 1px solid #bababa;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+body .container #content .side .borderBox li a:hover {
+  background: #fff;
+}
+
+body .container #content .side .nonBorderBox {
+  margin-bottom: 20px;
+}
+
+body .container #content .side .menuBox li a {
+  font-size: 15px;
+  display: block;
+  height: 41px;
+  line-height: 41px;
+  padding-left: 10px;
+  border-bottom: 1px solid #bababa;
+}
+
+body .container #content .side .productBox ul li a {
+  height: 50px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 11px;
+  line-height: 13px;
+  border-bottom: 1px solid #bababa;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .productBox ul li a {
+    height: 30%;
+  }
+}
+
+body .container #content .side .productBox ul li a img {
+  width: 50px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .productBox ul li a img {
+    width: 20%;
+    height: auto;
+  }
+}
+
+body .container #content .side .productBox ul li a p {
+  padding-left: 10px;
+}
+
+body .container #content .side .productBox ul li a p .brandColor {
+  color: #0E36C9;
+}
+
+body .container #content .side .oparating .oparatingCompany {
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+}
+
+body .container #content .side .oparating .oparatingCompany .company {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+body .container .footer {
+  background: #0E36C9;
+  color: #fff;
+  height: 74px;
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-top: 18px;
+}
+
+body .container .footer .footerSmall {
+  font-size: 12px;
+  line-height: 24px;
+}

@@ -1,0 +1,573 @@
+@charset "UTF-8";
+.hover, body .container .header .pcmenu ul li.active, body .container .header .pcmenu ul li:hover, body .container #content .main .linkPart:hover, body .container #content .side .borderBox li a:hover, body .container #content .side .nonBorderBox li a:hover {
+  color: #0E36C9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background-color: #CDCDCD;
+  font-size: 15px;
+  line-height: 30px;
+  color: #666;
+}
+
+@media only screen and (max-width: 790px) {
+  body {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+body .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+body .container .header {
+  border-top: 5px solid #0E36C9;
+}
+
+body .container .header .sph1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .header .sph1 .logo {
+  height: 100px;
+  position: relative;
+}
+
+body .container .header .sph1 .logo a img {
+  position: absolute;
+  top: calc(50% - 14px);
+  width: 300px;
+  left: 48px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container .header .sph1 .logo a img {
+    width: 200px;
+    top: calc(50% - 10px);
+    left: 15px;
+  }
+}
+
+body .container .header .sph1 #menuOpen {
+  display: none;
+  margin: 23px 23px 25px auto;
+  border: 1px solid;
+  padding: 5px 5px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+body .container .header .sph1 #menuOpen.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container .header .sph1 #menuOpen {
+    display: inline-block;
+  }
+}
+
+body .container .header .pcmenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .container .header .pcmenu ul li {
+  width: 100%;
+  border: 1px solid #CDCDCD;
+  border-left: none;
+  height: 66px;
+  position: relative;
+}
+
+body .container .header .pcmenu ul li:last-child {
+  border-right: none;
+}
+
+body .container .header .pcmenu ul li.active, body .container .header .pcmenu ul li:hover {
+  background: #E6EBFA;
+}
+
+body .container .header .pcmenu ul li.active::before, body .container .header .pcmenu ul li:hover::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 40px;
+  top: 12px;
+  left: 5px;
+  background: #0E36C9;
+}
+
+body .container .header .pcmenu ul li a {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  padding: 15px;
+}
+
+body .container .header .pcmenu ul li a .navEn {
+  color: #bababa;
+  letter-spacing: .2em;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container .header .pcmenu {
+    display: none;
+  }
+}
+
+body .container .header .overlay {
+  position: absolute;
+  top: 100px;
+  opacity: 0;
+  width: 100%;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  pointer-events: none;
+  z-index: 300;
+}
+
+body .container .header .overlay.show {
+  opacity: 0.8;
+  display: block;
+  pointer-events: auto;
+}
+
+body .container .header .overlay #menuClose {
+  position: absolute;
+  top: -72px;
+  right: 23px;
+  border: 1px solid;
+  padding: 5px 5px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+body .container .header .overlay nav ul {
+  display: block;
+  color: #fff;
+  background: #000;
+}
+
+body .container .header .overlay nav ul {
+  color: #fff;
+  background: #000;
+}
+
+body .container .header .overlay nav ul li {
+  width: 100%;
+  border: 1px solid #CDCDCD;
+  border-left: none;
+  height: 95px;
+  position: relative;
+}
+
+body .container .header .overlay nav ul li:last-child {
+  border-right: none;
+}
+
+body .container .header .overlay nav ul a {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  display: block;
+  text-align: left;
+  padding: 23px 15px;
+}
+
+body .container .header .overlay nav ul a .navEn {
+  color: #fff;
+  font-size: 12px;
+  line-height: 40px;
+  font-weight: 400;
+}
+
+body .container .keyVisual img {
+  width: 100%;
+}
+
+body .container #content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 35px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content {
+    display: block;
+    padding: 11px;
+  }
+}
+
+body .container #content .main {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+body .container #content .main .titleBar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1140ef), to(#0e36ca));
+  background: linear-gradient(#1140ef, #0e36ca);
+  color: #fff;
+  height: 46px;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 46px;
+  padding-left: 40px;
+  position: relative;
+}
+
+body .container #content .main .titleBar::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 30px;
+  background: #889DED;
+  top: 8px;
+  left: 20px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .titleBar {
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 20px;
+  }
+  body .container #content .main .titleBar::before {
+    height: 20px;
+    top: 5px;
+    left: 10px;
+  }
+}
+
+body .container #content .main .subTitleBar {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#ECECEC));
+  background: linear-gradient(#FFFFFF, #ECECEC);
+  color: #666;
+  border-radius: 4px;
+  border: 1px solid #CCCCCC;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 15px 20px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .subTitleBar {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 6px 10px;
+  }
+}
+
+body .container #content .main .linkPart {
+  text-decoration: underline;
+}
+
+body .container #content .main .linkPart:hover {
+  text-decoration: none;
+}
+
+body .container #content .main .info ul {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .info ul {
+    padding: 19px 10px;
+  }
+}
+
+body .container #content .main .info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 31px;
+  border-bottom: 1px solid #CDCDCD;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .info ul li {
+    line-height: 20px;
+  }
+}
+
+body .container #content .main .info ul li .infoTime {
+  color: #0E36C9;
+  letter-spacing: .1em;
+}
+
+body .container #content .main .info ul li .infoDetail {
+  padding-left: 30px;
+}
+
+body .container #content .main .info ul li .infoDetail .new {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 11px;
+  line-height: 20px;
+  padding: 0 3px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .info ul li .infoDetail {
+    padding: 1px 5px;
+    font-size: 14px;
+    padding-left: 26px;
+    line-height: 30px;
+  }
+}
+
+body .container #content .main .info .infoPast {
+  padding-right: 20px;
+  text-align: end;
+  margin-bottom: 70px;
+}
+
+body .container #content .main .info .infoPast a {
+  text-decoration: underline;
+}
+
+body .container #content .main .readMe {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+body .container #content .main .readMe p,
+body .container #content .main .readMe h4 {
+  padding: 0 20px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .readMe p,
+  body .container #content .main .readMe h4 {
+    font-size: 14px;
+    padding: 0 10px;
+    line-height: 24px;
+  }
+}
+
+body .container #content .main .readMe .subTitleBar {
+  margin: 20px 0 10px;
+}
+
+body .container #content .main .readMe .redBox {
+  color: red;
+  font-weight: 700;
+  padding-top: 1rem;
+}
+
+body .container #content .main .readMe .redBox::before {
+  content: "■";
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .readMe .redBox {
+    font-size: 12px;
+    padding-top: 1em;
+  }
+}
+
+body .container #content .main .readMe .redTitle {
+  color: red;
+}
+
+body .container #content .main .product {
+  padding: 65px 0;
+}
+
+body .container #content .main .product p {
+  padding: 15px 20px 0;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .main .product p {
+    font-size: 12px;
+    padding: 10px;
+    line-height: 18px;
+  }
+}
+
+body .container #content .side {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  margin-left: 45px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side {
+    margin-left: 0;
+  }
+}
+
+body .container #content .side .sideTitlebar {
+  padding-left: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  height: 66px;
+  line-height: 66px;
+  background: #EEEEEE;
+  border-top: 5px solid #0E36C9;
+  border-bottom: 1px solid #bababa;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .sideTitlebar {
+    font-size: 12px;
+    height: 54px;
+    line-height: 54px;
+  }
+}
+
+body .container #content .side .borderBox {
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ebebeb));
+  background: linear-gradient(#fff, #ebebeb);
+  border: 1px solid #bababa;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+body .container #content .side .borderBox li a:hover {
+  background: #fff;
+}
+
+body .container #content .side .nonBorderBox {
+  margin-bottom: 20px;
+}
+
+body .container #content .side .menuBox li a {
+  font-size: 15px;
+  display: block;
+  height: 41px;
+  line-height: 41px;
+  padding-left: 10px;
+  border-bottom: 1px solid #bababa;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .menuBox li a {
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+body .container #content .side .productBox ul li a {
+  height: 50px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 11px;
+  line-height: 13px;
+  border-bottom: 1px solid #bababa;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .productBox ul li a {
+    height: 30%;
+  }
+}
+
+body .container #content .side .productBox ul li a img {
+  width: 50px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .productBox ul li a img {
+    width: 20%;
+    height: auto;
+  }
+}
+
+body .container #content .side .productBox ul li a p {
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .productBox ul li a p {
+    padding-left: 4px;
+  }
+}
+
+body .container #content .side .productBox ul li a p .brandColor {
+  color: #0E36C9;
+}
+
+body .container #content .side .oparating .oparatingCompany {
+  font-size: 11px;
+  line-height: 17px;
+  text-align: center;
+}
+
+body .container #content .side .oparating .oparatingCompany .company {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container #content .side .oparating .oparatingCompany .company {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+body .container .footer {
+  background: #0E36C9;
+  color: #fff;
+  height: 74px;
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  padding-top: 18px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container .footer {
+    height: 53px;
+    font-size: 10px;
+    padding-top: 10px;
+    line-height: 20px;
+  }
+}
+
+body .container .footer .footerSmall {
+  font-size: 12px;
+  line-height: 24px;
+}
+
+@media only screen and (max-width: 790px) {
+  body .container .footer .footerSmall {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
